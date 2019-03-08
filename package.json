@@ -1,0 +1,33 @@
+{
+  "name": "yeapiekiyay.github.io",
+  "version": "1.0.0",
+  "description": "My personal website.",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "jest": "^24.3.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeapiekiyay/yeapiekiyay.github.io.git"
+  },
+  "keywords": [
+    "michael",
+    "yeaple",
+    "yeaple",
+    "innovations",
+    "developer",
+    "website"
+  ],
+  "author": "Michael Yeaple <michael@yeapleinnovations.com>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/yeapiekiyay/yeapiekiyay.github.io/issues"
+  },
+  "homepage": "https://github.com/yeapiekiyay/yeapiekiyay.github.io#readme"
+}
