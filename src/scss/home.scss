@@ -1,0 +1,30 @@
+@import 'colors';
+@import 'fonts';
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+
+    aside {
+        grid-column: span 3;
+        padding: 10px;
+    }
+
+    main {
+        grid-column: span 9;
+        padding: 10px;
+    }
+}
+
+img.logo {
+    max-width: 90%;
+}
