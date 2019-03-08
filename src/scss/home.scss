@@ -1,6 +1,8 @@
 @import 'colors';
 @import 'fonts';
 
+$padding-standard: 10px;
+
 html, body {
     height: 100%;
     margin: 0;
@@ -8,23 +10,80 @@ html, body {
 }
 
 div.wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
     width: 100vw;
     height: 100vh;
     max-width: 100%;
 
     aside {
-        grid-column: span 3;
-        padding: 10px;
+        padding: 20px 0;
+        width: 300px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        border-right: solid 1px $color-text;
+
+        > img.logo {
+            max-width: 100%;
+            padding: $padding-standard;
+        }
+
+        nav {
+            flex: 6;
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+
+            > a {
+                flex: 1;
+                background: $color-bg;
+                border-bottom: solid 1px $color-text;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                text-decoration: none;
+            }
+
+            > a:first-child {
+                border-top: solid 1px $color-text;
+            }
+
+            > a:nth-child(even) {
+                background: #fff;
+            }
+
+            > a:last-child {
+                border-bottom: none;
+            }
+
+            > a:hover {
+                background: $color-bg-alternate;
+                color: $color-text-alternate;
+            }
+        }
     }
 
     main {
-        grid-column: span 9;
-        padding: 10px;
-    }
-}
+        padding: 0;
+        position: relative;
+        width: 100%;
+        margin-left: 300px;
 
-img.logo {
-    max-width: 90%;
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            padding: $padding-standard;
+        }
+
+        section:nth-child(even) {
+            background: $color-bg-alternate;
+            color: $color-text-alternate;
+        }
+    }
 }
