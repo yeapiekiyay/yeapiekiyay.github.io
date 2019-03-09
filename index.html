@@ -17,8 +17,8 @@
         <nav>
             <div class="nav-links">
                 <a href="#about">About</a>
-                <a href="#projects">Projects</a>
                 <a href="#career">Career</a>
+                <a href="#projects">Projects</a>
                 <a href="#education">Education</a>
                 <a href="#stuff-i-do">Stuff</a>
             </div>
@@ -46,16 +46,6 @@
                         </p>
                     </div>
                 </section>
-                <section id="projects">
-                    <div class="content">
-                            <h1>Projects</h1>
-                            <p>I've done a little freelance work alongside some personal projects on my own time. 
-                                Most of the time, I spend time outside of work reading up or toying with new technologies--not necessarily building specific projects.
-                                As a result, you won't find a lot here!</p>
-                            <h2>Just Write</h2>
-                            <p></p>
-                    </div>
-                </section>
                 <section id="career">
                     <div class="content">
                         <h1>Career</h1>
@@ -67,7 +57,20 @@
                             Pharos Systems International - November 2017 to Present
                         </h2>
                         <p>
-                            I've worked on a wide variety of things at Pharos. 
+                            I've worked on a wide variety of things at Pharos. Some of the highlights include:
+                            <ul>
+                                <li>Helping to improve our Cake build process</li>
+                                <li>Redesigning and implementing our authentication and secure print client</li>
+                                <li>Improving our Android app for Ricoh iMFPs</li>
+                                <li>Building multiple PoCs</li>
+                                <li>Microservices!</li>
+                            </ul>
+                            My team was responsible for the redesign and implementation of our authentication and secure print client. This was a fun and unique challenge
+                            because our client is browser-based in an effort to reduce the amount of client-specific logic we would have to write. This limitation in
+                            conjunction with the limitations of integrated Multi Functional Printer (iMFP) browsers resulted in us writing our own pure TypeScript web client app.
+                            The app has no runtime dependencies other than those required by certain vendors to interact with their iMFPs--which are only delivered to the client in
+                            the case that it's running on an iMFP that requires them. The resulting application is a lot more performant than the legacy application
+                            and is also a lot more streamlined. I'm very proud of the work my team and I put into this one.
                         </p>
                         <h2>
                             Wegmans Food Markets - July 2015 to November 2017
@@ -106,6 +109,19 @@
                                 <li>Bug fixes!</li>
                             </ul>
                         </p>
+                    </div>
+                </section>
+                <section id="projects">
+                    <div class="content">
+                            <h1>Projects</h1>
+                            <p>I've done a little freelance work alongside some personal projects on my own time. 
+                                Most of the time, I spend time outside of work reading up or toying with new technologies--not necessarily building specific projects.
+                                As a result, you won't find a lot here!</p>
+                            <h2>Just Write</h2>
+                            <p>
+                                RoR
+                                .NET Core
+                            </p>
                     </div>
                 </section>
                 <section id="education">
