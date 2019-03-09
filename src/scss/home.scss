@@ -87,6 +87,10 @@ main {
     section:nth-child(odd) {
         background: $color-bg-alternate;
         color: $color-text-alternate;
+
+        a {
+            color: $color-link-alternate;
+        }
     }
 
     section:nth-child(even) a {
