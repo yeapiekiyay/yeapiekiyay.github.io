@@ -6,21 +6,17 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
-    "eslint": "^5.15.1",
-    "jest": "^24.3.1",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   },
   "scripts": {
     "build-dev": "cross-env NODE_ENV=development webpack --config webpack.config.js --mode=development",
-    "build-release": "cross-env NODE_ENV=production webpack --config webpack.config.js --mode=production",
-    "test": "jest"
+    "build-release": "cross-env NODE_ENV=production webpack --config webpack.config.js --mode=production"
   },
   "repository": {
     "type": "git",
