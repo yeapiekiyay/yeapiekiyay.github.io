@@ -1,13 +1,27 @@
 @import 'colors';
 @import 'fonts';
 
+$margin-default: 25px;
+
+html {
+    overflow-x: hidden;
+}
+
+p, a, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    color: $color-accent;
+}
+
 .container {
     display: grid;
   
     grid-template-areas:
       "header header header"
-      "nav content side"
-      "footer footer footer";
+      "nav content side";
   
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: auto 1fr auto;
@@ -16,44 +30,85 @@
     height: 100vh;
 }
 
+// Header
+
 header {
     grid-area: header;
 }
 
+.logo {
+    display: block;
+    max-width: 90%;
+    max-height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// End header
+
+// Navigation
+
 nav {
     grid-area: nav;
     margin-left: 0.5rem;
+}
 
+.nav-links { 
     display: flex;
     flex-direction: column;
     align-content: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    margin: 0 $margin-default;
 
-    > a:hover {
+    > a {
+        font-size: 1.75em;
+    }
+}
+
+// End navigation
+
+main {
+    grid-area: content;
+
+    section {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+
+        .content {
+            position: sticky;
+            top: 0;
+            margin: 0 25px;
+        }
+    }
+
+    section:nth-child(even) {
         background: $color-bg-alternate;
         color: $color-text-alternate;
     }
 }
 
-main {
-    grid-area: content;
-}
+// Side bar
 
 aside {
     grid-area: side;
     margin-right: 0.5rem;
 }
 
-footer {
-    grid-area: footer;
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    margin: 0 $margin-default;
 }
 
-.logo {
-    display: block;
-    max-width: 100%;
-    max-height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-}
+// End side bar
 
 @media (max-width: 768px) {
     .container {
@@ -61,19 +116,27 @@ footer {
         "header"
         "nav"
         "content"
-        "side"
-        "footer";
+        "side";
 
         grid-template-columns: 1fr;
         grid-template-rows:
         auto // Header
         minmax(75px, auto) // Nav
         1fr // Content
-        minmax(75px, auto) // Sidebar
-        auto; // Footer
+        minmax(75px, auto); // Sidebar
     }
 
     nav, aside {
         margin: 0;
+    }
+
+    .nav-links { 
+        position: relative;
+        height: 100%;
+    }
+
+    .contact {
+        position: relative;
+        height: 100%;
     }
 }
