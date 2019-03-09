@@ -8,27 +8,14 @@ html {
     overflow-x: hidden;
 }
 
-p, a, h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
     padding: 0;
 }
 
-a {
-    color: $color-accent;
-    font-size: 1.75em;
-    padding: 5px;
+p {
     margin: 5px 0;
-    border-radius: $border-radius-default;
-}
-
-a:hover {
-    color: $color-text-alternate;
-    background-color: $color-button-hover;
-}
-
-a:active {
-    color: $color-text-alternate;
-    background-color: $color-button-pressed;
+    padding: 0;
 }
 
 .container {
@@ -101,6 +88,10 @@ main {
         background: $color-bg-alternate;
         color: $color-text-alternate;
     }
+
+    section:nth-child(even) a {
+        color: $color-accent;
+    }
 }
 
 // Side bar
@@ -121,6 +112,26 @@ aside {
 }
 
 // End side bar
+
+.contact, .nav-links {
+    a {
+        color: $color-accent;
+        font-size: 1.75em;
+        padding: 5px;
+        margin: 5px 0;
+        border-radius: $border-radius-default;
+    }
+
+    a:hover {
+        color: $color-text-alternate;
+        background-color: $color-button-hover;
+    }
+
+    a:active {
+        color: $color-text-alternate;
+        background-color: $color-button-pressed;
+    }
+}
 
 @media (max-width: 768px) {
     .container {
