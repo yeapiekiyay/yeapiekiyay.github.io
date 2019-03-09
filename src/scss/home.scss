@@ -56,7 +56,7 @@ nav {
 .nav-links { 
     display: flex;
     flex-direction: column;
-    align-content: center;
+    justify-content: center;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -76,12 +76,12 @@ main {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        align-content: center;
+        justify-content: center;
 
         .content {
             position: sticky;
             top: 0;
-            margin: 0 25px;
+            margin: 0 $margin-default $margin-default $margin-default;
         }
     }
 
@@ -101,7 +101,7 @@ aside {
 .contact {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    justify-content: center;
     position: sticky;
     top: 0;
     height: 100vh;
