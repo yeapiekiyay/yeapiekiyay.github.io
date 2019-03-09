@@ -85,7 +85,7 @@ main {
         }
     }
 
-    section:nth-child(even) {
+    section:nth-child(odd) {
         background: $color-bg-alternate;
         color: $color-text-alternate;
     }
@@ -121,22 +121,12 @@ aside {
         grid-template-columns: 1fr;
         grid-template-rows:
         auto // Header
-        minmax(75px, auto) // Nav
+        minmax(100vh, auto) // Nav
         1fr // Content
-        minmax(75px, auto); // Sidebar
+        minmax(100vh, auto); // Sidebar
     }
 
     nav, aside {
         margin: 0;
-    }
-
-    .nav-links { 
-        position: relative;
-        height: 100%;
-    }
-
-    .contact {
-        position: relative;
-        height: 100%;
     }
 }
