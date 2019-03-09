@@ -2,6 +2,7 @@
 @import 'fonts';
 
 $margin-default: 25px;
+$border-radius-default: 10px;
 
 html {
     overflow-x: hidden;
@@ -12,8 +13,22 @@ p, a, h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
-a:hover {
+a {
     color: $color-accent;
+    font-size: 1.75em;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: $border-radius-default;
+}
+
+a:hover {
+    color: $color-text-alternate;
+    background-color: $color-button-hover;
+}
+
+a:active {
+    color: $color-text-alternate;
+    background-color: $color-button-pressed;
 }
 
 .container {
@@ -61,10 +76,6 @@ nav {
     top: 0;
     height: 100vh;
     margin: 0 $margin-default;
-
-    > a {
-        font-size: 1.75em;
-    }
 }
 
 // End navigation
@@ -77,6 +88,7 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        border-radius: $border-radius-default;
 
         .content {
             position: sticky;
